@@ -1,0 +1,38 @@
+body {
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto Mono", sans-serif;
+    background-image: url(assets/forest.png);
+}
+h1 {
+    color: #F9F6EE;
+}
+#message {
+    padding: 1rem 2rem 7rem;
+    background-color: #333333;
+    width: 16rem;
+    height: 100%;
+    color: #F9F6EE;
+    border-radius: 5%;
+}
+
+#ASCII {
+    max-width: 30%;
+    height: 100%;
+    color: #F9F6EE;
+    background-color: #333333;
+    border-radius: 5%;
+    padding: 1rem;
+    font-family: monospace;
+    white-space: pre;
+}
+
+button {
+    width: 10rem;
+    height: 4rem;
+}

@@ -5,17 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mixed Messages</title>
-    <script src="script.js"></script> 
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet"> 
+    <script>
+        const newAdventure = () => {
+            randomMessage();
+        }
+    </script>
 </head>
 <body>
     <h1>Mixed Messages</h1>
-    <p id="message">Click the button to go on an adventure!</p>
     <button type="button" onclick="newAdventure()">Random adventure!</button>
-    <script>
-        const newAdventure = () => {
-            document.getElementById("message").innerHTML = randomMessage();
-            document.body.style.backgroundImage = "url('assets\cave.jpg')"
-        }
-    </script>
+    <p id="message">Click the button to go on an adventure!</p>
+    <p id="ASCII"></p>
 </body>
 </html>
