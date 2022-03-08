@@ -9,11 +9,12 @@
 </head>
 <body>
     <h1>Mixed Messages</h1>
-    <p id="message">Message</p>
-    <button type="button" onclick="newMessage()">Try it</button>
+    <p id="message">Click the button to go on an adventure!</p>
+    <button type="button" onclick="newAdventure()">Random adventure!</button>
     <script>
-        const newMessage = () => {
+        const newAdventure = () => {
             document.getElementById("message").innerHTML = randomMessage();
+            document.body.style.backgroundImage = "url('assets\cave.jpg')"
         }
     </script>
 </body>
