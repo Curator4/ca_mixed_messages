@@ -232,6 +232,8 @@ const selectActionIndex = npcIndex => {
 
 // returns the final randomized message
 randomMessage = () => {
+    // disable button
+    document.getElementById("myBtn").disabled = true;
     // load variables
     const locationIndex = Math.floor(Math.random() * locations.length);
     const location = locations[locationIndex];
@@ -247,7 +249,10 @@ randomMessage = () => {
     // clear message
     document.getElementById("message").innerHTML = "";
     // Function to make text appear like typewriter
-    const typeWriter = () => { 
+    const typeWriter = () => {
+        if (i === txt.length) {
+            document.getElementById("myBtn").disabled = false;
+        } 
         if (i < txt.length) {
             document.getElementById("message").innerHTML += txt.charAt(i);
             i++;
