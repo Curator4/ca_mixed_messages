@@ -13,7 +13,8 @@ h1 {
     color: #F9F6EE;
 }
 #message {
-    padding: 1rem 2rem 7rem;
+    height: 100;
+    padding: 2rem;
     background-color: #333333;
     width: 16rem;
     height: 100%;
@@ -30,6 +31,7 @@ h1 {
     padding: 1rem;
     font-family: monospace;
     white-space: pre;
+    display: none;
 }
 
 button {
