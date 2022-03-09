@@ -177,6 +177,9 @@ String.raw`
 const randNum = (min, max) => {
     return Math.floor(Math.random() * (max - min) + min);
 }
+
+// typewriter effect for text
+// selects path to background image dependent on location
 const selectBackground = locationIndex => {
     switch (locationIndex) {
         case 0:
@@ -237,8 +240,19 @@ randomMessage = () => {
     const npc = npcs[npcIndex];
     const action = actions[selectActionIndex(npcIndex)];
     document.body.style.backgroundImage = selectBackground(locationIndex);
-    document.getElementById("message").innerHTML = `${location} ${npc} ${action}`;
+    const txt = `${location} ${npc} ${action}`;
     document.getElementById("ASCII").innerHTML = ASCII[npcIndex];
-    document.getElementById("ASCII").style.display = "block"; 
+    document.getElementById("ASCII").style.display = "block";
+    document.getElementById("message").innerHTML = "";
+    const typeWriter = () => { 
+        if (i < txt.length) {
+            document.getElementById("message").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+        }
+    }
+    let i = 0;
+    const speed = 20;
+    typeWriter(txt);
 };
 
